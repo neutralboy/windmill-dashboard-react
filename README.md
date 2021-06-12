@@ -11,6 +11,8 @@ This is not a template. This is a complete application, built on top of React, w
 
 Accessibility is a priority in my projects and I think it should be in yours too, so this was developed listening to real screen readers, focus traps and keyboard navigation are available everywhere.
 
+This is a Typescript version of the popular windmill-dashboard-react. It works the exact same way. You can find the original project [here](https://github.com/estevanmaito/windmill-dashboard-react)
+
 ## 📦 Features
 
 - 🦮 Throughly accessible (developed using screen readers)
