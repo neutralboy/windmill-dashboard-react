@@ -1,6 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-function ChartLegend({ legends }) {
+import {ILegends} from "../../utils/demo/chartsData";
+
+interface IChartLegend{
+  legends: ILegends[]
+}
+
+function ChartLegend({ legends }: IChartLegend) {
   return (
     <div className="flex justify-center mt-4 space-x-3 text-sm text-gray-600 dark:text-gray-400">
       {legends.map((legend) => (

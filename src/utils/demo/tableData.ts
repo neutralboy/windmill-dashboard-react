@@ -1,4 +1,14 @@
-export default [
+interface ITableData{
+  avatar: string
+  name: string
+  job: string
+  amount: number
+  status: string
+  date: string
+};
+
+
+const tableData: ITableData[] =  [
   {
     avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/lokesh_coder/128.jpg',
     name: 'Chandler Jacobi',
@@ -359,4 +369,9 @@ export default [
     status: 'danger',
     date: 'Mon Jun 15 2020 04:04:32 GMT-0300 (Brasilia Standard Time)',
   },
-]
+];
+
+export default tableData;
+export type {
+  ITableData
+};

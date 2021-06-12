@@ -5,7 +5,16 @@
  * If you're looking to actual Router routes, go to
  * `routes/index.js`
  */
-const routes = [
+
+interface IRoute{
+  path?: string
+  icon?: string
+  name: string
+  routes?: IRoute[]
+  exact?: boolean
+}
+
+const routes: IRoute[] = [
   {
     path: '/app/dashboard', // the url
     icon: 'HomeIcon', // the component being exported from icons/index.js
@@ -68,6 +77,7 @@ const routes = [
       },
     ],
   },
-]
+];
 
-export default routes
+export type {IRoute};
+export default routes;

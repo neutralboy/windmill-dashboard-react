@@ -1,7 +1,13 @@
-import React from 'react'
-import { Card, CardBody } from '@windmill/react-ui'
+import React, { ReactSVGElement } from 'react';
+import { Card, CardBody } from '@windmill/react-ui';
 
-function InfoCard({ title, value, children: icon }) {
+interface IInfoCard{
+  title: string
+  value: string
+  children: ReactSVGElement
+}
+
+function InfoCard({ title, value, children: icon }: IInfoCard) {
   return (
     <Card>
       <CardBody className="flex items-center">
@@ -12,7 +18,7 @@ function InfoCard({ title, value, children: icon }) {
         </div>
       </CardBody>
     </Card>
-  )
-}
+  );
+};
 
-export default InfoCard
+export default InfoCard;

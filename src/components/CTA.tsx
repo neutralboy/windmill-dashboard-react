@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function CTA() {
   return (
@@ -16,7 +16,7 @@ function CTA() {
         View more <span dangerouslySetInnerHTML={{ __html: '&RightArrow;' }}></span>
       </span>
     </a>
-  )
-}
+  );
+};
 
-export default CTA
+export default CTA;
