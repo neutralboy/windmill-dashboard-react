@@ -8,6 +8,7 @@ import { IIcon } from "../../utils/demo";
 
 
 function Icon({ icon, ...props }: IIcon){
+  // @ts-ignore
   const Icon= Icons[icon];
   return <Icon {...props} />
 }

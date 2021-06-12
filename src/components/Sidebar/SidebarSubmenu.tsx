@@ -4,8 +4,10 @@ import { DropdownIcon } from '../../icons';
 import * as Icons from '../../icons';
 import { Transition } from '@windmill/react-ui';
 import { IRoute } from '../../routes/sidebar';
+import { IIcon } from "../../utils/demo";
 
-function Icon({ icon, ...props }) {
+function Icon({ icon, ...props }: IIcon) {
+  // @ts-ignore
   const Icon = Icons[icon];
   return <Icon {...props} />
 }
@@ -27,7 +29,7 @@ function SidebarSubmenu({ route }: ISidebarSubmenu) {
         aria-haspopup="true"
       >
         <span className="inline-flex items-center">
-          <Icon className="w-5 h-5" aria-hidden="true" icon={route.icon} />
+          <Icon className="w-5 h-5" aria-hidden="true" icon={route.icon || ""} />
           <span className="ml-4">{route.name}</span>
         </span>
         <DropdownIcon className="w-4 h-4" aria-hidden="true" />
@@ -51,7 +53,7 @@ function SidebarSubmenu({ route }: ISidebarSubmenu) {
                 className="px-2 py-1 transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
                 key={r.name}
               >
-                <Link className="w-full" to={r.path}>
+                <Link className="w-full" to={r.path || ""}>
                   {r.name}
                 </Link>
               </li>
