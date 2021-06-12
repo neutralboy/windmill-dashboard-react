@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 
 import ImageLight from '../assets/img/forgot-password-office.jpeg'
@@ -32,12 +31,14 @@ function ForgotPassword() {
 
               <Label>
                 <span>Email</span>
-                <Input className="mt-1" placeholder="Jane Doe" />
+                <Input css="" className="mt-1" placeholder="Jane Doe" />
               </Label>
 
-              <Button tag={Link} to="/login" block className="mt-4">
+            <Link to="/app">
+              <Button tag={"button"} block className="mt-4">
                 Recover password
               </Button>
+            </Link>
             </div>
           </main>
         </div>

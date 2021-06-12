@@ -1,18 +1,18 @@
-import React, { useState } from 'react'
+import { useState } from 'react';
 
-import PageTitle from '../components/Typography/PageTitle'
-import CTA from '../components/CTA'
-import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from '@windmill/react-ui'
+import PageTitle from '../components/Typography/PageTitle';
+import CTA from '../components/CTA';
+import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from '@windmill/react-ui';
 
 function Modals() {
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   function openModal() {
-    setIsModalOpen(true)
+    setIsModalOpen(true);
   }
 
   function closeModal() {
-    setIsModalOpen(false)
+    setIsModalOpen(false);
   }
 
   return (
@@ -57,7 +57,7 @@ function Modals() {
         </ModalFooter>
       </Modal>
     </>
-  )
-}
+  );
+};
 
-export default Modals
+export default Modals;

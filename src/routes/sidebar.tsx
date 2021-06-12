@@ -12,7 +12,7 @@ interface IRoute{
   name: string
   routes?: IRoute[]
   exact?: boolean
-}
+};
 
 const routes: IRoute[] = [
   {
