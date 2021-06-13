@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 
-import PageTitle from '../components/Typography/PageTitle'
-import SectionTitle from '../components/Typography/SectionTitle'
-import CTA from '../components/CTA'
+import PageTitle from '../components/Typography/PageTitle';
+import SectionTitle from '../components/Typography/SectionTitle';
+import CTA from '../components/CTA';
 import {
   Table,
   TableHeader,
@@ -15,12 +15,13 @@ import {
   Avatar,
   Button,
   Pagination,
-} from '@windmill/react-ui'
-import { EditIcon, TrashIcon } from '../icons'
+} from '@windmill/react-ui';
+import { EditIcon, TrashIcon } from '../icons';
+import { ITableData } from "../utils/demo/tableData";
 
-import response from '../utils/demo/tableData'
+import response from '../utils/demo/tableData';
 // make a copy of the data, for the second table
-const response2 = response.concat([])
+const response2 = response.concat([]);
 
 function Tables() {
   /**
@@ -36,20 +37,20 @@ function Tables() {
   const [pageTable2, setPageTable2] = useState(1)
 
   // setup data for every table
-  const [dataTable1, setDataTable1] = useState([])
-  const [dataTable2, setDataTable2] = useState([])
+  const [dataTable1, setDataTable1] = useState<ITableData[]>([])
+  const [dataTable2, setDataTable2] = useState<ITableData[]>([])
 
   // pagination setup
-  const resultsPerPage = 10
-  const totalResults = response.length
+  const resultsPerPage = 10;
+  const totalResults = response.length;
 
   // pagination change control
-  function onPageChangeTable1(p) {
+  function onPageChangeTable1(p: number) {
     setPageTable1(p)
   }
 
   // pagination change control
-  function onPageChangeTable2(p) {
+  function onPageChangeTable2(p: number) {
     setPageTable2(p)
   }
 
@@ -152,10 +153,10 @@ function Tables() {
                 </TableCell>
                 <TableCell>
                   <div className="flex items-center space-x-4">
-                    <Button layout="link" size="icon" aria-label="Edit">
+                    <Button layout="link" size="small" aria-label="Edit">
                       <EditIcon className="w-5 h-5" aria-hidden="true" />
                     </Button>
-                    <Button layout="link" size="icon" aria-label="Delete">
+                    <Button layout="link" size="small" aria-label="Delete">
                       <TrashIcon className="w-5 h-5" aria-hidden="true" />
                     </Button>
                   </div>

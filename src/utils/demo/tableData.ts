@@ -3,7 +3,7 @@ interface ITableData{
   name: string
   job: string
   amount: number
-  status: string
+  status: "success" | "danger" | "warning" | "neutral" | "primary" | undefined
   date: string
 };
 

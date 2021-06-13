@@ -29,6 +29,7 @@ function Cards() {
 
       <div className="grid gap-6 mb-8 md:grid-cols-2 xl:grid-cols-4">
         <InfoCard title="Total clients" value="6389">
+          {/* @ts-ignore */}
           <RoundIcon
             icon={PeopleIcon}
             iconColorClass="text-orange-500 dark:text-orange-100"
@@ -38,6 +39,7 @@ function Cards() {
         </InfoCard>
 
         <InfoCard title="Account balance" value="$ 46,760.89">
+        {/* @ts-ignore */}
           <RoundIcon
             icon={MoneyIcon}
             iconColorClass="text-green-500 dark:text-green-100"
@@ -47,6 +49,7 @@ function Cards() {
         </InfoCard>
 
         <InfoCard title="New sales" value="376">
+          {/* @ts-ignore */}
           <RoundIcon
             icon={CartIcon}
             iconColorClass="text-blue-500 dark:text-blue-100"
@@ -56,6 +59,7 @@ function Cards() {
         </InfoCard>
 
         <InfoCard title="Pending contacts" value="35">
+          {/* @ts-ignore */}
           <RoundIcon
             icon={ChatIcon}
             iconColorClass="text-teal-500 dark:text-teal-100"
